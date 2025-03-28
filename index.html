@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina la Canción</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .input-group {
+            margin-top: 20px;
+        }
+        .input-group input {
+            padding: 10px;
+            font-size: 16px;
+        }
+        .input-group button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-left: 10px;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adivina la Canción</h1>
+    <p id="hint">Pista: Esta es una pista de la canción.</p>
+    <div class="input-group">
+        <input type="text" id="guess" placeholder="Escribe el nombre de la canción">
+        <button onclick="checkGuess()">Adivinar</button>
+    </div>
+    <div class="message" id="message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
