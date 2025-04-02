@@ -3,64 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Computadora</title>
+    <title>¿Quieres ser mi novia?</title>
     <style>
         body {
-            background-color: #2c3e50;
-            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f8ff;
             font-family: Arial, sans-serif;
-            text-align: center;
         }
-        .computer {
-            width: 600px;
-            height: 400px;
-            border: 5px solid #34495e;
-            border-radius: 10px;
-            margin: 50px auto;
-            position: relative;
-            background-color: #34495e;
-        }
-        .tab {
-            display: inline-block;
-            padding: 10px;
-            background-color: #2980b9;
-            margin: 5px;
-            border-radius: 5px;
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
             cursor: pointer;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-            background-color: #ecf0f1;
-            color: #2c3e50;
+            border: none;
             border-radius: 5px;
+            background-color: #ff69b4;
+            color: white;
+        }
+        #mensaje {
             margin-top: 20px;
+            font-size: 24px;
+            color: #ff1493;
+            display: none;
         }
     </style>
 </head>
 <body>
 
-<div class="computer">
-    <h2>Simulador de Computadora</h2>
-    <div class="tabs">
-        <div class="tab" onclick="openTab('google')">Google</div>
-        <div class="tab" onclick="openTab('youtube')">YouTube</div>
-        <div class="tab" onclick="openTab('notas')">Notas</div>
-    </div>
-    <div id="google" class="content">¡Bienvenido a Google! 🕵️‍♂️ Busca lo que quieras.</div>
-    <div id="youtube" class="content">¡Bienvenido a YouTube! 🎥 ¡Mira videos de gatos! 🐱</div>
-    <div id="notas" class="content">Notas: Recuerda comprar más pizza 🍕 y ver más memes 😂.</div>
-</div>
+    <h1>¿Quieres ser mi novia? 💖</h1>
+    <button id="si">Sí</button>
+    <button id="no">No</button>
 
-<script>
-    function openTab(tabName) {
-        var contents = document.getElementsByClassName('content');
-        for (var i = 0; i < contents.length; i++) {
-            contents[i].style.display = 'none';
-        }
-        document.getElementById(tabName).style.display = 'block';
-    }
-</script>
+    <div id="mensaje">¡Felicitaciones! Ya eres mi novia. 🎉💍</div>
+
+    <script>
+        document.getElementById('si').onclick = function() {
+            document.getElementById('mensaje').style.display = 'block';
+        };
+
+        document.getElementById('no').onclick = function() {
+            // No hace nada, pero puedes agregar un mensaje divertido aquí si quieres.
+            alert("¡Oh no! 😢 Pero siempre serás mi amiga. ¡A seguir disfrutando!");
+        };
+    </script>
+    
+<footer>
+        <p><strong>Ivan</strong> | y sus húmores xd</p>
+    </footer>
 
 </body>
 </html>
